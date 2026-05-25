@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+#chat-box {
+  width: min(480px, 100%);
+  height: 340px;
+  overflow-y: auto;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.bubble {
+  padding: 10px 14px;
+  border-radius: 10px;
+  max-width: 80%;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.user {
+  background: #2563eb;
+  align-self: flex-end;
+}
+
+.bot {
+  background: #262626;
+  align-self: flex-start;
+}
+
+#controls {
+  width: min(480px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#mic-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: #2563eb;
+  cursor: pointer;
+  font-size: 1.6rem;
+  transition: background 0.2s;
+}
+
+#mic-btn.recording {
+  background: #dc2626;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.08); }
+}
+
+#status {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+select {
+  background: #1a1a1a;
+  color: #ccc;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+}
+
+#text-row {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+#text-input {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #eee;
+  border-radius: 8px;
+  padding: 8px 12px;
+  flex: 1;
+  min-width: 0;
+  font-size: 0.9rem;
+}
+
+#send-btn {
+  background: #2563eb;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 420px) {
+  #text-row    { flex-direction: column; }
+  #send-btn    { width: 100%; }
+}

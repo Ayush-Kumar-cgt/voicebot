@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚡ Voice Chatbot</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>⚡ VOICE CHATBOT</h1>
+
+  <div id="chat-box"></div>
+
+  <div id="controls">
+    <!-- <div id="options">
+      <label>Voice:
+        <select id="tts-voice">
+          <option value="af_heart">af_heart</option>
+          <option value="af_bella">af_bella</option>
+          <option value="af_sarah">af_sarah</option>
+          <option value="am_adam">am_adam</option>
+          <option value="am_michael">am_michael</option>
+          <option value="am_santa">am_santa</option>
+          <option value="bf_emma">bf_emma</option>
+          <option value="bm_george">bm_george</option>
+        </select>
+      </label>
+    </div> -->
+
+    <button id="mic-btn" aria-label="Start recording">🎤</button>
+    <span id="status">click mic to speak</span>
+
+    <div id="text-row">
+      <input id="text-input" type="text" placeholder="or type here..." autocomplete="off" />
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
